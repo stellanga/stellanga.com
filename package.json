@@ -6,9 +6,11 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "webDependencies": {
-    "canvas-confetti": "^1.2.0"
   },
   "devDependencies": {
     "snowpack": "^2.0.0-0"
+  },
+  "dependencies": {
+    "lit-element": "^2.3.1"
   }
 }

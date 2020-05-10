@@ -1,14 +1,34 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+:root {
+  --bg-color: #FEFEFE;
 }
 
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+[data-theme="dark"] {
+  --bg-color: #161625;
 }
+
+body {
+  background-color: var(--bg-color,red);
+  transition: background-color 0.5s ease;
+  min-height: 100vh;
+}
+
+/* Media queries */
+@media (min-width: 640px) {
+
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+
+}
+
