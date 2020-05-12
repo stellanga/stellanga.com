@@ -83,7 +83,7 @@ class Foot extends LitElement {
     return html`
       <ul>
         <li>
-          <a class="icon-17 linkedin" href="#" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/stellangarhammar/" title="LinkedIn">
             <div class="ir">
               <svg
                 class="lin-${getRandomInt(3)}"
@@ -132,7 +132,7 @@ class Foot extends LitElement {
           ></a>
         </li>
         <li>
-          <a class="icon-13 github" href="#" title="GitHub">
+          <a href="https://github.com/stellanga/" title="GitHub">
             <div class="ir">
               <svg
                 class="lin-${getRandomInt(3)}"
@@ -181,7 +181,7 @@ class Foot extends LitElement {
           ></a>
         </li>
         <li>
-          <a class="dribbble" href="#" title="Dribbble">
+          <a href="https://dribbble.com/stellanga" title="Dribbble">
             <div class="ir">
               <svg
                 class="lin-${getRandomInt(3)}"
@@ -230,7 +230,7 @@ class Foot extends LitElement {
           ></a>
         </li>
         <li>
-          <a class="icon-26 twitter" href="#" title="Twitter">
+          <a href="https://twitter.com/stellanga" title="Twitter">
             <div class="ir">
               <svg
                 class="lin-${getRandomInt(3)}"
