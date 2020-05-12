@@ -1,6 +1,23 @@
 import { LitElement, html, css } from "/web_modules/lit-element.js";
 
 class ThemeToggler extends LitElement {
+
+  firstUpdated() {
+    const currentTheme = localStorage.getItem("theme")
+      ? localStorage.getItem("theme")
+      : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+
+      if (currentTheme === "dark") {
+          console.log('dark theme in local storage')
+          const toggleSwitch = this.shadowRoot.querySelector('.theme-switch input[type="checkbox"]');
+          toggleSwitch.checked = true;
+      }
+    }
+  }
+
   static get styles() {
     return css`
       .theme-switch-wrapper {
@@ -12,6 +29,8 @@ class ThemeToggler extends LitElement {
         height: 34px;
         position: relative;
         width: 60px;
+        border-radius: 34px;
+        box-shadow: var(--drop-shadow);
       }
 
       .theme-switch input {
@@ -19,7 +38,8 @@ class ThemeToggler extends LitElement {
       }
 
       .slider {
-        background-color: #ccc;
+        box-shadow: var(--drop-shadow);
+        background-color: var(--slider-bgcolor);
         bottom: 0;
         cursor: pointer;
         left: 0;
@@ -30,7 +50,7 @@ class ThemeToggler extends LitElement {
       }
 
       .slider:before {
-        background-color: #fff;
+        background-color: var(--slider-knob-bgcolor);
         bottom: 4px;
         content: "";
         height: 26px;
@@ -41,10 +61,11 @@ class ThemeToggler extends LitElement {
       }
 
       input:checked + .slider {
-        background-color: #66bb6a;
+        background-color: var(--slider-bgcolor);
       }
 
       input:checked + .slider:before {
+        background-color: var(--slider-knob-bgcolor);
         transform: translateX(26px);
       }
 
