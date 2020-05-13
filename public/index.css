@@ -38,17 +38,17 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  background: var(--text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Default style 'mobile' for custom elements */
 stellanga-title {
   font-size: 1.5rem;
   width: 25%;
+}
+
+stellanga-bread a {
+    text-decoration: none;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Media queries */
