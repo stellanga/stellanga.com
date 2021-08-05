@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
@@ -83,7 +83,10 @@ class Foot extends LitElement {
     return html`
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/stellangarhammar/" title="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/stellangarhammar/"
+            title="LinkedIn"
+          >
             <div class="ir">
               <svg
                 class="lin-${getRandomInt(3)}"
@@ -327,4 +330,4 @@ class Foot extends LitElement {
               </svg>
               */
 
-customElements.define("stellanga-foot", Foot);
+customElements.define('stellanga-foot', Foot);

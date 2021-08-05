@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 class Body extends LitElement {
   static get styles() {
@@ -11,7 +11,7 @@ class Body extends LitElement {
       /* Media queries */
       @media (min-width: 640px) {
         :host {
-            flex-direction: row;
+          flex-direction: row;
         }
       }
     `;
@@ -24,4 +24,4 @@ class Body extends LitElement {
   }
 }
 
-customElements.define("stellanga-body", Body);
+customElements.define('stellanga-body', Body);

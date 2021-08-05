@@ -1,19 +1,20 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 class ThemeToggler extends LitElement {
-
   firstUpdated() {
-    const currentTheme = localStorage.getItem("theme")
-      ? localStorage.getItem("theme")
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
       : null;
 
     if (currentTheme) {
-      document.documentElement.setAttribute("data-theme", currentTheme);
+      document.documentElement.setAttribute('data-theme', currentTheme);
 
-      if (currentTheme === "dark") {
-          console.log('dark theme in local storage')
-          const toggleSwitch = this.shadowRoot.querySelector('.theme-switch input[type="checkbox"]');
-          toggleSwitch.checked = true;
+      if (currentTheme === 'dark') {
+        console.log('dark theme in local storage');
+        const toggleSwitch = this.shadowRoot.querySelector(
+          '.theme-switch input[type="checkbox"]',
+        );
+        toggleSwitch.checked = true;
       }
     }
   }
@@ -52,7 +53,7 @@ class ThemeToggler extends LitElement {
       .slider:before {
         background-color: var(--slider-knob-bgcolor);
         bottom: 4px;
-        content: "";
+        content: '';
         height: 26px;
         left: 4px;
         position: absolute;
@@ -81,11 +82,11 @@ class ThemeToggler extends LitElement {
 
   switchTheme(e) {
     if (e.target.checked) {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
     }
   }
 
@@ -101,4 +102,4 @@ class ThemeToggler extends LitElement {
   }
 }
 
-customElements.define("stellanga-theme-toggler", ThemeToggler);
+customElements.define('stellanga-theme-toggler', ThemeToggler);

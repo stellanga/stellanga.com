@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 class Title extends LitElement {
   static get styles() {
@@ -8,7 +8,7 @@ class Title extends LitElement {
         padding: 1rem;
         margin: 0;
         text-transform: uppercase;
-        font-family: "HK Nova Medium";
+        font-family: 'HK Nova Medium';
         background-clip: text;
         text-fill-color: transparent;
       }
@@ -24,16 +24,14 @@ class Title extends LitElement {
       }
 
       @media (min-width: 640px) {
-
         h1 {
-            letter-spacing: 12px;
+          letter-spacing: 12px;
         }
       }
 
       @media (min-width: 768px) {
-
         h1 {
-            letter-spacing: -25px;
+          letter-spacing: -25px;
         }
       }
     `;
@@ -43,4 +41,4 @@ class Title extends LitElement {
   }
 }
 
-customElements.define("stellanga-title", Title);
+customElements.define('stellanga-title', Title);

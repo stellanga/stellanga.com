@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 class Head extends LitElement {
   static get styles() {
@@ -15,4 +15,4 @@ class Head extends LitElement {
   }
 }
 
-customElements.define("stellanga-header", Head);
+customElements.define('stellanga-header', Head);

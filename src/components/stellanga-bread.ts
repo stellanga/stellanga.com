@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "/web_modules/lit-element.js";
+import { LitElement, html, css } from 'lit-element';
 
 class Bread extends LitElement {
   static get styles() {
@@ -14,7 +14,7 @@ class Bread extends LitElement {
         padding: 0.5rem 0;
         margin: 0;
         font-weight: 300;
-        font-family: "Lato", sans-serif;
+        font-family: 'Lato', sans-serif;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 1s linear;
@@ -41,7 +41,7 @@ class Bread extends LitElement {
     for (let i = 0; i < children.length; i++) {
       setTimeout(() => {
         const child = children[i];
-        child.classList.add("show");
+        child.classList.add('show');
       }, delay);
 
       delay += 200;
@@ -70,4 +70,4 @@ class Bread extends LitElement {
   }
 }
 
-customElements.define("stellanga-bread", Bread);
+customElements.define('stellanga-bread', Bread);
